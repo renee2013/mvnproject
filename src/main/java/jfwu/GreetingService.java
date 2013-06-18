@@ -20,14 +20,18 @@ package jfwu;
 
 import javax.inject.Named;
 import javax.enterprise.context.ApplicationScoped;
+import org.apache.log4j.*;  
 
 @Named
 @ApplicationScoped
 public class GreetingService
 {
+    private static Logger log = Logger.getLogger(GreetingService.class);  
+
     public String createGreeting(String name)
     {
-        return "Hello " + name + ". We hope you enjoy Apache MyFaces!";
+        log.info("***************************test logging in the Main***************");  
+        return "Hello " + name + ". We hope you enjoy Apache MyFac;es!";
     }
 
 }
