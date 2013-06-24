@@ -7,7 +7,7 @@ git show --abbrev-commit HEAD | grep '^commit' | sed -e 's/commit //'>gitcommitc
 set /p commit=<gitcommitcount
 
 set buildno=%count%.%commit%
-echo %buildno%>version.txt
+echo CHANGESET_NUMBER=%buildno%>version.txt
 del gitcommitnumber
 del gitcommitcount
 @ECHO ON
