@@ -1,5 +1,5 @@
 @ECHO OFF
-git rev-list HEAD|wc -l|sed -e 's/ *//g'|xargs -n1 printf %%04d>gitcommitnumber
+git rev-list --remotes HEAD|wc -l|sed -e 's/ *//g'|xargs -n1 printf %%04d>gitcommitnumber
 set /p count=<gitcommitnumber
 REM echo %count%
 
